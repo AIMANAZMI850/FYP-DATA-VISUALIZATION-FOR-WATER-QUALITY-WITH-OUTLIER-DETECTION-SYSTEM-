@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+
+<header>
+		<div class="container", style="text-align: center;">
+		
+		<h2 class="h2 text-gray-900 mb-4">Water Quality Prediction</h2>
+		
+	</div>
+	</header>
+<div class="ml-container">
+
+	   <form action="{{ url_for('classify')}}" class="loginbox" method="post"><br>
+            <center>
+            <input type="text" name="do" placeholder="Enter value Do" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="ph" placeholder="Enter value pH" required="required"/> <br><br>
+            <input type="text" name="orp" placeholder="Enter value ORP" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="ec" placeholder="Enter value EC" required="required"/> <br><br>
+            <input type="text" name="tds" placeholder="Enter value TDS" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="water_temp" placeholder="Enter value water temp" required="required"/> <br><br>
+            <input type="text" name="ec" placeholder="Enter value EC" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="cph" placeholder="Enter value CpH" required="required"/> <br><br>
+            <input type="text" name="corp" placeholder="Enter value CORP" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="cec" placeholder="Enter value CEC" required="required"/><br><br>
+            <input type="text" name="ctds" placeholder="Enter value CTDS" required="required"/> &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="cwt" placeholder="Enter value CWT" required="required"/><br><br>
+            <input type="submit" class="btn-info" value="Predict">
+        </form>
+</div>
+        <p style="text-align: center;">{{ output }}</p>
+
+    	
+{% endblock %}
+	
+	
+
+</body>

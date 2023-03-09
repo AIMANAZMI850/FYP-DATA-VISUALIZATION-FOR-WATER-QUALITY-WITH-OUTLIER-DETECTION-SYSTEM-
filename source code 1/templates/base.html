@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>WATER QUALITY MONITORING SYSTEM</title>
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="../static/css/styles2.css" rel="stylesheet" />
+    
+         
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark ">
+            <!-- Navbar Logo-->
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="../static/image/WQMS-logo.png" alt="..." height="90" >
+                </a>
+            <div class="nav">
+                <a class="nav-link" href="{{url_for('index')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Dashboard
+                </a>
+
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                    Pages
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-right"></i></div>
+                </a>
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                            Authentication
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-right"></i></div>
+                        </a>
+                        <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/login">Login</a>
+                                <a class="nav-link" href="/register">Register</a>
+                            </nav>
+                        </div>
+                    </nav>
+                </div>
+                <a class="nav-link" href="{{url_for('crud')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                    Crud
+                </a>
+                <a class="nav-link" href="{{url_for('classify')}}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
+                    Prediction
+                </a>
+                
+            </div>              
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                        <a href="/" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure For Logout?')">Logout</a></li>
+            </ul>
+        </nav>
+        
+            <div id="layoutSidenav_content">
+                <main>
+                {% block content %}
+                    
+                </main>
+                
+            </div>
+            
+        </div>
+        {% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../static/js/scripts.js"></script> 
+        
+    </body>
+</html>
+
+               
+       
